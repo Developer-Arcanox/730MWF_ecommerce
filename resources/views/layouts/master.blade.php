@@ -42,7 +42,7 @@
                 </ul>
                 <div class="d-flex">
                     <a href="#" class="btn btn-outline-dark me-2"><i class="fas fa-search"></i></a>
-                    <a href="#" class="btn btn-outline-dark me-2"><i class="fas fa-user"></i></a>
+                    <a href="{{ route('login.page') }}" class="btn btn-outline-dark me-2"><i class="fas fa-user"></i></a>
                     <a href="#" class="btn btn-outline-dark position-relative">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -132,8 +132,8 @@
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
-     <script src="{{ asset('asset/js/script.js') }}"></script>
-     <script src="{{ asset('asset/js/register.js') }}"></script>
+    <script src="{{ asset('asset/js/script.js') }}"></script>
+    <script src="{{ asset('asset/js/register.js') }}"></script>
 </body>
 
 </html>

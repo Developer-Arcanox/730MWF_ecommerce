@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="asset('assets/css/login.css')">
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 </head>
 
 <body>
@@ -92,7 +92,9 @@
                     </button>
 
                     <div class="login-footer">
-                        Don't have an account? <a href="#">Sign up</a>
+                        Don't have an account? <a href="">Sign up</a>
+
+                        {{ route('register.page') }}
                     </div>
                 </form>
             </div>
@@ -103,7 +105,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="{{ asset('assets/js/login.js')}}"></script>
+    <script src="{{ asset('assets/js/login.js') }}"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f5f7fa;
     color: var(--dark-color);
     min-height: 100vh;
@@ -23,8 +23,8 @@ body {
 
 .login-left {
     flex: 1;
-    background: linear-gradient(rgba(67, 97, 238, 0.8), rgba(67, 97, 238, 0.9)),
-        url("https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background: linear-gradient(rgba(67, 97, 238, 0.8), rgba(67, 97, 238, 0.9)), 
+                url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     color: white;
@@ -112,8 +112,7 @@ body {
     color: var(--gray-color);
 }
 
-.divider::before,
-.divider::after {
+.divider::before, .divider::after {
     content: "";
     flex: 1;
     border-bottom: 1px solid #e9ecef;
@@ -151,11 +150,11 @@ body {
 }
 
 .btn-google {
-    color: #db4437;
+    color: #DB4437;
 }
 
 .btn-facebook {
-    color: #4267b2;
+    color: #4267B2;
 }
 
 .login-footer {
