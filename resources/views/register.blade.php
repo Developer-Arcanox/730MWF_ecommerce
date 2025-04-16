@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
 </head>
+
 <body>
     <div class="register-container">
         <!-- Left Side - Visual Content -->
@@ -20,7 +22,7 @@
             <div class="register-left-content">
                 <h1 class="mb-4">Join Our Community!</h1>
                 <p class="mb-5">Create an account to unlock personalized shopping experiences and exclusive benefits.</p>
-                
+
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-tag"></i>
@@ -53,41 +55,42 @@
                 </ul>
             </div>
         </div>
-        
+
         <!-- Right Side - Registration Form -->
         <div class="register-right">
             <div class="register-form-container">
                 <div class="logo">ModernShop</div>
                 <h2 class="register-title">Create Your Account</h2>
-                
-                <form id="registrationForm">
+
+                <form id="registrationForm" action="{{ route('register') }}" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                                <input type="text" class="form-control" name="first_name" id="firstName" placeholder="Enter your first name" required>
                                 <div class="invalid-feedback">Please enter your first name</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                                <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Enter your last name" required>
                                 <div class="invalid-feedback">Please enter your last name</div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                         <div class="invalid-feedback">Please enter a valid email address</div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
                         <div class="password-input-group">
-                            <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Create a password" required>
                             <span class="password-toggle" id="togglePassword">
                                 <i class="far fa-eye"></i>
                             </span>
@@ -103,7 +106,7 @@
                         </ul>
                         <div class="invalid-feedback">Password must meet all requirements</div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
                         <div class="password-input-group">
@@ -114,13 +117,13 @@
                         </div>
                         <div class="invalid-feedback">Passwords do not match</div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone Number (Optional)</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
                         <small class="text-muted">For order updates and delivery notifications</small>
                     </div>
-                    
+
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" id="termsCheck" required>
                         <label class="form-check-label" for="termsCheck">
@@ -128,26 +131,26 @@
                         </label>
                         <div class="invalid-feedback">You must agree to the terms and conditions</div>
                     </div>
-                    
+
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" id="newsletterCheck">
                         <label class="form-check-label" for="newsletterCheck">
                             Subscribe to our newsletter for exclusive offers and updates
                         </label>
                     </div>
-                    
-                    <button type="submit" class="btn btn-register mb-3">Create Account</button>
-                    
+
+                    <button type="submit" id="registerSubmitBtn" class="btn btn-register mb-3">Create Account</button>
+
                     <div class="divider">or sign up with</div>
-                    
+
                     <button type="button" class="social-register-btn btn-google">
                         <i class="fab fa-google"></i> Google
                     </button>
-                    
+
                     <button type="button" class="social-register-btn btn-facebook">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </button>
-                    
+
                     <div class="register-footer">
                         Already have an account? <a href="#">Sign in</a>
                     </div>
@@ -158,8 +161,9 @@
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="{{ asset('assets/js/register.js')}}"></script>
 </body>
+
 </html>

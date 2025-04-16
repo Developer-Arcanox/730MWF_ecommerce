@@ -160,4 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    let registerSubmitBtn = document.getElementById("registerSubmitBtn");
+
+    registerSubmitBtn.addEventListener("click", function  () {
+        form.submit();
+    })
 });

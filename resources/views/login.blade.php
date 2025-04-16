@@ -55,16 +55,17 @@
                 <div class="logo">ModernShop</div>
                 <h2 class="login-title">Sign in to your account</h2>
 
-                <form>
+                <form action="{{ route('login') }}" method="post" id="loginForm">
+                    @csrf
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <div class="password-input-group">
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
                             <span class="password-toggle" id="togglePassword">
                                 <i class="far fa-eye"></i>
                             </span>
@@ -79,7 +80,7 @@
                         <a href="#" class="text-decoration-none">Forgot password?</a>
                     </div>
 
-                    <button type="submit" class="btn btn-login mb-3">Sign In</button>
+                    <button type="submit" id="loginSubmitBtn" class="btn btn-login mb-3">Sign In</button>
 
                     <div class="divider">or continue with</div>
 
@@ -92,9 +93,8 @@
                     </button>
 
                     <div class="login-footer">
-                        Don't have an account? <a href="">Sign up</a>
+                        Don't have an account? <a href="{{ route('register.page') }}">Sign up</a>
 
-                        {{ route('register.page') }}
                     </div>
                 </form>
             </div>
